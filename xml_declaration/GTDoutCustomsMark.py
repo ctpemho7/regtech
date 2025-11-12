@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-from wrapper_classes import IXMLElement, pretty_print_xml_minidom
+from base import IXMLElement
 
 
 class DocumentID(IXMLElement):
@@ -335,4 +335,4 @@ if __name__ == "__main__":
     ET.register_namespace('clt_ru', 'urn:customs.ru:CommonLeafTypes:5.10.0')
 
     gtd_out_customs_mark = get_gtd_out_customs_mark()
-    pretty_print_xml_minidom(gtd_out_customs_mark)
+    print(gtd_out_customs_mark)

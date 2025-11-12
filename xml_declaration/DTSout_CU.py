@@ -1,9 +1,7 @@
 import xml.etree.ElementTree as ET
 
-from wrapper_classes import IXMLElement, pretty_print_xml_minidom
+from base import IXMLElement
 import xml.etree.ElementTree as ET
-
-
 
 
 # Существующие классы (остаются без изменений)
@@ -1026,4 +1024,4 @@ if __name__ == "__main__":
     ET.register_namespace('cat_EDTS_cu', 'urn:customs.ru:CUESADDTSCommonAggregateTypes:5.24.0')
 
     dts_out_cu = get_dts_out_cu()
-    pretty_print_xml_minidom(dts_out_cu)
+    print(dts_out_cu)

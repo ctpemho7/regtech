@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-from wrapper_classes import IXMLElement, pretty_print_xml_minidom
+from base import IXMLElement
 from FilledPerson import DocArchIdDetails
 
 
@@ -125,4 +125,4 @@ def get_CUESADCustomsRepresentative():
 
 if __name__== "__main__":
     customs_representative = get_CUESADCustomsRepresentative()
-    pretty_print_xml_minidom(customs_representative)
+    print(customs_representative)

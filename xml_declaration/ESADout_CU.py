@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 from typing import Optional
 
-from wrapper_classes import IXMLElement, XMLElementType, pretty_print_xml_minidom
+from base import IXMLElement
 from ESADout_CUGoodsShipment import ESADout_CUGoodsShipment, get_goods_shipment
 from FilledPerson import FilledPerson, get_filled_person
 from CUESADCustomsRepresentative import CUESADCustomsRepresentative, get_CUESADCustomsRepresentative
@@ -192,4 +192,4 @@ if __name__ == "__main__":
     ET.register_namespace('xmlns', 'urn:customs.ru:Information:CustomsDocuments:ESADout_CU:5.24.0')
 
     esa_dout_cu = get_ESADout_CU()
-    pretty_print_xml_minidom(esa_dout_cu)
+    print(esa_dout_cu)

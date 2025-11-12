@@ -1,4 +1,4 @@
-from wrapper_classes import EDContainer, pretty_print_xml_minidom
+from wrapper_classes import EDContainer
 
 from ESADout_CU import get_ESADout_CU
 from DTSout_CU import get_dts_out_cu
@@ -10,5 +10,6 @@ if __name__ == "__main__":
     c.ESADout_CU = get_ESADout_CU()
     c.DTSout_CU = get_dts_out_cu()
     c.GTDoutCustomsMark = get_gtd_out_customs_mark()
+    print(c)
 
-    pretty_print_xml_minidom(c)
+    c.save("file")

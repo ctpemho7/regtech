@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 import xml.etree.ElementTree as ET
 from typing import List
 
-from wrapper_classes import IXMLElement, pretty_print_xml_minidom
+from base import IXMLElement
 
 # Вспомогательные классы для адресов и организаций
 class SubjectAddressDetails(IXMLElement):
@@ -1626,4 +1626,4 @@ def get_goods_shipment():
 
 if __name__ == "__main__":
     goods_shipment = get_goods_shipment()
-    pretty_print_xml_minidom(goods_shipment)
+    print(goods_shipment)

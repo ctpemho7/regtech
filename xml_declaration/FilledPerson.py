@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-from wrapper_classes import IXMLElement, pretty_print_xml_minidom
+from base import IXMLElement
 
 
 class CommunicationDetails(IXMLElement):
@@ -286,4 +286,4 @@ def get_filled_person():
 
 if __name__== "__main__":
     filled_person = get_filled_person()    
-    pretty_print_xml_minidom(filled_person)
+    print(filled_person)
