@@ -254,7 +254,8 @@ class GTDoutCustomsMark(IXMLElement):
     def to_xml(self) -> ET.Element:
         elem = ET.Element('GTDoutCustomsMark')
         elem.set('DocumentModeID', self.document_mode_id)
-        
+        elem.set('xmlns', 'urn:customs.ru:Information:CustomsDocuments:GTDoutCustomsMark:5.25.0')
+        elem.set('xsi', 'http://www.w3.org/2001/XMLSchema-instance')
         elem.append(self.document_id.to_xml())
         
         gtd_document_id_elem = ET.SubElement(elem, 'GTDDocumentID')
@@ -323,16 +324,16 @@ def get_gtd_out_customs_mark():
 
 
 if __name__ == "__main__":
-    ET.register_namespace('RUScat_ru', 'urn:customs.ru:RUSCommonAggregateTypes:5.24.0')
-    ET.register_namespace('cat_ru', 'urn:customs.ru:CommonAggregateTypes:5.24.0')
-    ET.register_namespace('RUDECLcat', 'urn:customs.ru:RUDeclCommonAggregateTypesCust:5.24.0')
-    ET.register_namespace('catESAD_cu', 'urn:customs.ru:CUESADCommonAggregateTypesCust:5.24.0')
-    ET.register_namespace('xmlns', 'urn:customs.ru:Information:CustomsDocuments:ESADout_CU:5.24.0')
-    ET.register_namespace('cat_EDTS_cu', 'urn:customs.ru:CUESADDTSCommonAggregateTypes:5.24.0')
-    ET.register_namespace('catESAD_ru', 'urn:customs.ru:RUCommonAggregateTypes:5.24.0')
-    ET.register_namespace('cltESAD_cu', 'urn:customs.ru:CUESADCommonLeafTypes:5.17.0')
-    ET.register_namespace('CategoryCust', 'urn:customs.ru:Categories:3.0.0')
-    ET.register_namespace('clt_ru', 'urn:customs.ru:CommonLeafTypes:5.10.0')
+    # ET.register_namespace('RUScat_ru', 'urn:customs.ru:RUSCommonAggregateTypes:5.24.0')
+    # ET.register_namespace('cat_ru', 'urn:customs.ru:CommonAggregateTypes:5.24.0')
+    # ET.register_namespace('RUDECLcat', 'urn:customs.ru:RUDeclCommonAggregateTypesCust:5.24.0')
+    # ET.register_namespace('catESAD_cu', 'urn:customs.ru:CUESADCommonAggregateTypesCust:5.24.0')
+    # ET.register_namespace('xmlns', 'urn:customs.ru:Information:CustomsDocuments:ESADout_CU:5.24.0')
+    # ET.register_namespace('cat_EDTS_cu', 'urn:customs.ru:CUESADDTSCommonAggregateTypes:5.24.0')
+    # ET.register_namespace('catESAD_ru', 'urn:customs.ru:RUCommonAggregateTypes:5.24.0')
+    # ET.register_namespace('cltESAD_cu', 'urn:customs.ru:CUESADCommonLeafTypes:5.17.0')
+    # ET.register_namespace('CategoryCust', 'urn:customs.ru:Categories:3.0.0')
+    # ET.register_namespace('clt_ru', 'urn:customs.ru:CommonLeafTypes:5.10.0')
 
     gtd_out_customs_mark = get_gtd_out_customs_mark()
     print(gtd_out_customs_mark)

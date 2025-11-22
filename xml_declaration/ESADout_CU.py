@@ -134,7 +134,7 @@ class ESADout_CU(IXMLElement):
         # root.set('xmlns:cat_ru', 'urn:customs.ru:CommonAggregateTypes:5.24.0')
         # root.set('xmlns:RUDECLcat', 'urn:customs.ru:RUDeclCommonAggregateTypesCust:5.24.0')
         # root.set('xmlns:catESAD_cu', 'urn:customs.ru:CUESADCommonAggregateTypesCust:5.24.0')
-        # root.set('xmlns', 'urn:customs.ru:Information:CustomsDocuments:ESADout_CU:5.24.0')
+        root.set('xmlns', 'urn:customs.ru:Information:CustomsDocuments:ESADout_CU:5.24.0')
         root.set('DocumentModeID', self.document_mode_id)
 
         # Добавляем дочерние элементы
@@ -170,7 +170,7 @@ def get_ESADout_CU():
     )
 
     esa_dout_cu = ESADout_CU(
-        document_mode_id="1006058E",
+        document_mode_id="1006107E",
         document_id=document_id,
         customs_procedure = customs_procedure,
         customs_mode_code = customs_mode_code,
@@ -185,11 +185,11 @@ def get_ESADout_CU():
 
 if __name__ == "__main__":
 
-    ET.register_namespace('RUScat_ru', 'urn:customs.ru:RUSCommonAggregateTypes:5.24.0')
-    ET.register_namespace('cat_ru', 'urn:customs.ru:CommonAggregateTypes:5.24.0')
-    ET.register_namespace('RUDECLcat', 'urn:customs.ru:RUDeclCommonAggregateTypesCust:5.24.0')
-    ET.register_namespace('catESAD_cu', 'urn:customs.ru:CUESADCommonAggregateTypesCust:5.24.0')
-    ET.register_namespace('xmlns', 'urn:customs.ru:Information:CustomsDocuments:ESADout_CU:5.24.0')
+    # ET.register_namespace('RUScat_ru', 'urn:customs.ru:RUSCommonAggregateTypes:5.24.0')
+    # ET.register_namespace('cat_ru', 'urn:customs.ru:CommonAggregateTypes:5.24.0')
+    # ET.register_namespace('RUDECLcat', 'urn:customs.ru:RUDeclCommonAggregateTypesCust:5.24.0')
+    # ET.register_namespace('catESAD_cu', 'urn:customs.ru:CUESADCommonAggregateTypesCust:5.24.0')
+    # ET.register_namespace('xmlns', 'urn:customs.ru:Information:CustomsDocuments:ESADout_CU:5.24.0')
 
     esa_dout_cu = get_ESADout_CU()
     print(esa_dout_cu)

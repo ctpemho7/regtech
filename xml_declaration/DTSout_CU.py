@@ -1016,12 +1016,12 @@ def get_dts_out_cu():
 
 if __name__ == "__main__":
 
-    ET.register_namespace('RUScat_ru', 'urn:customs.ru:RUSCommonAggregateTypes:5.24.0')
-    ET.register_namespace('cat_ru', 'urn:customs.ru:CommonAggregateTypes:5.24.0')
-    ET.register_namespace('RUDECLcat', 'urn:customs.ru:RUDeclCommonAggregateTypesCust:5.24.0')
-    ET.register_namespace('catESAD_cu', 'urn:customs.ru:CUESADCommonAggregateTypesCust:5.24.0')
-    ET.register_namespace('xmlns', 'urn:customs.ru:Information:CustomsDocuments:ESADout_CU:5.24.0')
-    ET.register_namespace('cat_EDTS_cu', 'urn:customs.ru:CUESADDTSCommonAggregateTypes:5.24.0')
+    # ET.register_namespace('RUScat_ru', 'urn:customs.ru:RUSCommonAggregateTypes:5.24.0')
+    # ET.register_namespace('cat_ru', 'urn:customs.ru:CommonAggregateTypes:5.24.0')
+    # ET.register_namespace('RUDECLcat', 'urn:customs.ru:RUDeclCommonAggregateTypesCust:5.24.0')
+    # ET.register_namespace('catESAD_cu', 'urn:customs.ru:CUESADCommonAggregateTypesCust:5.24.0')
+    # ET.register_namespace('xmlns', 'urn:customs.ru:Information:CustomsDocuments:ESADout_CU:5.24.0')
+    # ET.register_namespace('cat_EDTS_cu', 'urn:customs.ru:CUESADDTSCommonAggregateTypes:5.24.0')
 
     dts_out_cu = get_dts_out_cu()
     print(dts_out_cu)

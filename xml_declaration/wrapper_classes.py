@@ -60,7 +60,9 @@ class EDContainer(IXMLElement):
         
         # Добавляем атрибут DocumentModeID
         root.set('DocumentModeID', self.document_mode_id)
-        
+        root.set('xmlns', 'urn:customs.ru:CommonAggregateTypes:5.24.0')
+        root.set('xmlns', 'urn:customs.ru:Information:ExchangeDocuments:ED_Container:5.24.0')
+
         # Добавляем document_id если он есть
         if self.document_id:
             root.append(self.document_id.to_xml())
